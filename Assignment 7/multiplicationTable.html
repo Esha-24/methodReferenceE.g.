@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Assignment7</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<body>
+    <table id="t1">
+
+    </table>
+    
+    <script type="text/javascript">
+        var row = prompt("Enter number of rows: ");
+        var col = prompt("Enter number of column : ");
+        
+        var rowNum = parseInt(row,10);
+        var colNum = parseInt(col,10);
+        createTable(rowNum,colNum);
+
+        function createTable(rowNum,colNum){
+            for(var i=1;i<=rowNum;i++)
+            {
+               var ele = document.getElementById("t1").insertRow(i-1) ;
+                for(var j=1;j<=colNum;j++)
+                {
+                    var val = ele.insertCell(j-1);
+                    val.innerHTML =i*j;
+
+                }
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>
